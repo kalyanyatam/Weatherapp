@@ -1,38 +1,150 @@
-.App {
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('background.jpg');
+}
+
+
+.app-container {
+  background: url('background.jpg');
+  background-size: cover;
+  background-repeat:space;
+  height: 75vh;
+  padding: 10px 40px 20px 50px;
+  padding-top: 110px;
+  display: flex;
+  justify-content: flex-start;  
+  align-items: center;        
+}
+
+
+.left-side {
+  margin-right: 20px;
+  width: 300px;
+}
+
+
+.card {
+  display:grid;
+  width: 100%;
+  height: 350px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(189, 180, 180, 0.1);
+  border-radius: 8px;
+  background-color: whitesmoke;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(10px);
+}
+
+.card-body {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-body h1 {
+  font-size: 24px;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.weather-details {
+  font-family: Verdana;
+  color: black;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.right-side {
+  flex: 1;                     /* Allows the right side to take remaining space */
   display: flex;
-  flex-direction: column;
+  justify-content: center;     /* Center the favourites container horizontally */
+  align-items: flex-start;     /* Align items to the start (top) */
+}
+
+.favourites-container {
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Take up the full available width within right-side */
+  max-width: 300px;            /* Ensure it doesn't exceed 300px */
+  text-align: center;          /* Center the text inside the container */
+  margin-top: 40px;            /* Move the container slightly upward */
+}
+
+.favourites-container h3 {
+  margin-bottom: 10px;
+}
+
+.favourites-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.favourites-container li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Button Styles */
+.button {
+  text-align: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.button::before {
+  content: ""; 
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease; 
+}
+
+.button:hover {
+  background-color: #0056b3; 
+  transform: scale(1.05);
+}
+
+.button:hover::before {
+  width: 100%; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Additional Text Styling */
+.h1, .text {
+  text-align: center;
+  font-family: monospace;
+  color: black;
+  font-size: 20px;
+}
+
+.main-content {
+  flex-grow: 1; 
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left-side, .main-content {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

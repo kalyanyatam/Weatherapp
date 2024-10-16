@@ -1,0 +1,20 @@
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .weather-container input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .weather-container button {
+    padding: 0.5rem;
+  }
+  
+  .weather-info {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
